@@ -2,10 +2,24 @@ function tocaSomPom() {
   document.querySelector('#som_tecla_pom').play();
 }
 
-document.querySelector('.tecla_pom').onclick = tocaSomPom;
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-function tocaSomClap() {
-  document.querySelector('#som_tecla_clap').play();
+listaDeTeclas[0].onclick = tocaSomPom;
+listaDeTeclas[1].onclick = tocaSomClap;
+listaDeTeclas[2].onclick = tocaSomTim;
+listaDeTeclas[3].onclick = tocaSomPuff;
+listaDeTeclas[4].onclick = tocaSomSplash;
+listaDeTeclas[5].onclick = tocaSomToim;
+listaDeTeclas[6].onclick = tocaSomPsh;
+listaDeTeclas[7].onclick = tocaSomTic;
+listaDeTeclas[8].onclick = tocaSomTom;
+
+let cont = 0;
+//equanto
+while (contador < listaDeTeclas.length) {
+  listaDeTeclas[contador].onclick = tocaSomPom;
+
+  contador = contador + 1;
+
+
 }
-
-document.querySelector('.tecla_clap').onclick = tocaSomClap;
